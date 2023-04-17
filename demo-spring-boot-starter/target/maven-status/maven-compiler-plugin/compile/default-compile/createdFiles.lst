@@ -1,0 +1,5 @@
+org\ls\starter\SimpleBean.class
+org\ls\App.class
+org\ls\starter\EnableRegisterServer.class
+org\ls\starter\MyAutoConfiguration.class
+org\ls\starter\ConfigMarker.class
