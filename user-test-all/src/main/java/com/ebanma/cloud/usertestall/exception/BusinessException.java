@@ -1,0 +1,40 @@
+package com.ebanma.cloud.usertestall.exception;
+
+import com.ebanma.cloud.usertestall.domain.common.ErrorCodeEnum;
+
+public class BusinessException extends RuntimeException {
+    private final String code;
+
+    /**
+     * 根据枚举来构建业务异常
+     *
+     * @param errorCode 错误代码
+     */
+    public BusinessException(ErrorCodeEnum errorCode) {
+        super(errorCode.getDesc());
+        this.code =errorCode.getCode();
+    }
+
+    /**
+     * 根据自定义消息来构建业务异常
+     *
+     * @param errorCode 错误代码
+     * @param message   消息
+     */
+    public BusinessException(ErrorCodeEnum errorCode, String message) {
+        super(message);
+        this.code = errorCode.getCode();
+    }
+
+    /**
+     * 根据异常来构建业务异常
+     *
+     * @param errorCode 错误代码
+     * @param cause     导致
+     */
+    public BusinessException(ErrorCodeEnum errorCode, Throwable cause) {
+        super(cause);
+        this.code = errorCode.getCode();
+
+    }
+}
