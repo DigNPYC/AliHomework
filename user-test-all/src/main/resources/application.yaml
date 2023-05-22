@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_test?characterEncoding=UTF-8&userUnicode=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    dirver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: mybatis/mappper/gen/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+simplebean:
+  id: 1
+  name: ???starter
